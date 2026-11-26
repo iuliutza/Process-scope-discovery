@@ -5,7 +5,7 @@ signature graph of an OCEL 2.0 log.
 
 - **Learn how it works**: guided walkthrough on the official Logistics log (bundled), 9 steps,
   with a *free explore* switch on the signals, boundary score, merge and Infomap steps.
-- **Run on my log**: upload an OCEL 2.0 JSON file → signal overview → merge (k or τ) → Infomap (Markov time)
+- **Run on OCEL**: upload an OCEL 2.0 JSON file → signal overview → merge (k or τ) → Infomap (Markov time)
   → compare → export Procellar rules + a Markdown report. Optional GT rules file for F1.
 
 ## Run
