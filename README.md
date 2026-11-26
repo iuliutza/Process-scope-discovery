@@ -35,10 +35,3 @@ Procellar has no hosted version; its README explains how to run it locally and i
 | `data/` | official Logistics OCEL + fixed GT rules |
 | `tests/check_logistics.py` | checks the engine against the notebook outputs (F1 curve, first merge, Infomap, rules) |
 
-## Differences to the notebook
-
-- Combine is the weighted mean only (no max switch).
-- Defaults = thesis settings: equal weights, change of pace 0, θ 0, λ 0, Infomap `together`, seed 42, 20 trials.
-- Logic of signals, merge, Infomap, rules and F1 is copied from the cells unchanged; ties in the merge are
-  still broken by key order and are flagged in the UI.
-- Only OCEL 2.0 **JSON** is read (same reader as the notebook).

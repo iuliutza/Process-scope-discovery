@@ -1,0 +1,135 @@
+[
+  {
+    "processName": "Order Management",
+    "imported": false,
+    "rules": [
+      {
+        "ruleName": "om1",
+        "parentProcess": "Order Management",
+        "includeOT": {
+          "entities": [
+            "Transport Document",
+            "Customer Order"
+          ],
+          "condition": []
+        },
+        "includeAct": {
+          "entities": [
+            "Register Customer Order",
+            "Book Vehicles"
+          ],
+          "condition": []
+        },
+        "excludeOT": {
+          "entities": [],
+          "condition": []
+        },
+        "excludeAct": {
+          "entities": [
+            "Order Empty Containers"
+          ],
+          "condition": []
+        }
+      }
+    ],
+    "relations": {}
+  },
+  {
+    "processName": "Goods Management",
+    "imported": false,
+    "rules": [
+      {
+        "ruleName": "gm1",
+        "parentProcess": "Goods Management",
+        "includeOT": {
+          "entities": [],
+          "condition": []
+        },
+        "includeAct": {
+          "entities": [
+            "Order Empty Containers",
+            "Pick Up Empty Container",
+            "Collect Goods"
+          ],
+          "condition": []
+        },
+        "excludeOT": {
+          "entities": [],
+          "condition": []
+        },
+        "excludeAct": {
+          "entities": [],
+          "condition": []
+        }
+      }
+    ],
+    "relations": {}
+  },
+  {
+    "processName": "Transportation Management",
+    "imported": false,
+    "rules": [
+      {
+        "ruleName": "tm1",
+        "parentProcess": "Transportation Management",
+        "includeOT": {
+          "entities": [
+            "Container"
+          ],
+          "condition": []
+        },
+        "includeAct": {
+          "entities": [],
+          "condition": []
+        },
+        "excludeOT": {
+          "entities": [],
+          "condition": []
+        },
+        "excludeAct": {
+          "entities": [
+            "Pick Up Empty Container",
+            "Order Empty Containers",
+            "Collect Goods",
+            "Depart",
+            "Reschedule Container",
+            "Load to Vehicle"
+          ],
+          "condition": []
+        }
+      }
+    ],
+    "relations": {}
+  },
+  {
+    "processName": "Export Management",
+    "imported": false,
+    "rules": [
+      {
+        "ruleName": "em1",
+        "parentProcess": "Export Management",
+        "includeOT": {
+          "entities": [],
+          "condition": []
+        },
+        "includeAct": {
+          "entities": [
+            "Reschedule Container",
+            "Load to Vehicle",
+            "Depart"
+          ],
+          "condition": []
+        },
+        "excludeOT": {
+          "entities": [],
+          "condition": []
+        },
+        "excludeAct": {
+          "entities": [],
+          "condition": []
+        }
+      }
+    ],
+    "relations": {}
+  }
+]
