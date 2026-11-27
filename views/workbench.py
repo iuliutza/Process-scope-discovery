@@ -26,7 +26,7 @@ with st.sidebar:
 
 if src.startswith("Upload") and up is None:
     st.info("Upload an OCEL 2.0 JSON file in the sidebar, or switch to the Logistics demo log. "
-            "The file stays on this machine.", icon=":material/upload_file:")
+            , icon=":material/upload_file:")
     st.stop()
 
 try:
@@ -184,11 +184,9 @@ with tabs[1]:
 
 # ================================================================ infomap
 with tabs[2]:
-    c1, c2 = st.columns([0.3, 0.7])
-    weight = c1.radio("Link weight", ["together", "steps"], key="im_w",
-                      help="together = hand-overs × (1 − b); steps = hand-overs only")
+    weight = "together"            # link weight fixed: hand-overs × (1 − b)
     res = {mt: C.get_infomap(key, theta, WT, weight, mt, int(seed), int(trials), L, S, B_plain) for mt in mts}
-    mt = c2.select_slider("Markov time", options=mts, value=0.75 if 0.75 in mts else mts[0], key="im_mt", help=C.tip("markov time"))
+    mt = st.select_slider("Markov time", options=mts, value=0.75 if 0.75 in mts else mts[0], key="im_mt", help=C.tip("markov time"))
     parts_i = res[mt][0]
     smap_i = E.scope_map(parts_i)
     st.session_state["infomap_result"] = (parts_i, f"mt{mt:g}")

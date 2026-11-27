@@ -25,7 +25,7 @@ SIGNALS = ["participants", "multiplicity", "wait", "pace_change"]
 DEFAULTS = dict(theta=0.0,
                 weights={"participants": 1.0, "multiplicity": 1.0, "wait": 1.0, "pace_change": 0.0},
                 balancer=0.0, proc_qual="process",
-                weight="together", markov_times=[0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0],
+                weight="together", markov_times=[0.25, 0.35, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0],
                 seed=42, trials=20)
 
 
